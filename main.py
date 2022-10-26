@@ -8,6 +8,6 @@ coupang = Coupang(
 )
 
 products = list(map(
-    coupang.getGoodsDetail,
-    coupang.getHrefInGoodsList("118900")
+    coupang.getProductDetail,
+    coupang.getHrefInProducts("118900")
 ))

@@ -1,13 +1,13 @@
 from abc import *
 
-from domain.Goods import Goods
+from domain.Product import Product
 
 
 class CoupangParser:
     @abstractmethod
-    def parseHrefInGoodsList(self, html) -> list[str]:
+    def parseHrefInProducts(self, html) -> list[str]:
         pass
 
     @abstractmethod
-    def parseGoodsDetail(self, html) -> Goods:
+    def parseProductDetail(self, html) -> Product:
         pass

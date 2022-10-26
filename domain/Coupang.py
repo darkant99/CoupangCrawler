@@ -1,4 +1,4 @@
-from domain.Goods import Goods
+from domain.Product import Product
 
 
 class Coupang:
@@ -6,10 +6,10 @@ class Coupang:
         self.client = client
         self.parser = parser
 
-    def getHrefInGoodsList(self, categoryId) -> list[str]:
-        html = self.client.requestGoodsList(categoryId)
-        return self.parser.parseHrefInGoodsList(html)
+    def getHrefInProducts(self, categoryId) -> list[str]:
+        html = self.client.requestProducts(categoryId)
+        return self.parser.parseHrefInProducts(html)
 
-    def getGoodsDetail(self, href) -> Goods:
-        html = self.client.requestGoodsDetail(href)
-        return self.parser.parseGoodsDetail(html)
+    def getProductDetail(self, href) -> Product:
+        html = self.client.requestProductDetail(href)
+        return self.parser.parseProductDetail(html)

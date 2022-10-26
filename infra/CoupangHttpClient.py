@@ -31,13 +31,13 @@ class CoupangHttpClient(CoupangClient):
     def __loadHtml(self, url):
         return self.__get(url).text
 
-    def requestGoodsList(self, categoryId) -> str:
+    def requestProducts(self, categoryId) -> str:
         response = self.__get(
             self.__path2Url("/np/categories/" + categoryId)
         )
         return response.text
 
-    def requestGoodsDetail(self, href) -> str:
+    def requestProductDetail(self, href) -> str:
         response = self.__get(
             self.__path2Url(href)
         )

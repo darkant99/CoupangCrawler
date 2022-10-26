@@ -3,9 +3,9 @@ from abc import *
 
 class CoupangClient:
     @abstractmethod
-    def requestGoodsList(self, categoryId) -> str:
+    def requestProducts(self, categoryId) -> str:
         pass
 
     @abstractmethod
-    def requestGoodsDetail(self, href) -> str:
+    def requestProductDetail(self, href) -> str:
         pass
